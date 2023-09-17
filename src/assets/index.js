@@ -1,4 +1,4 @@
-import logo from "./msr.gif";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
