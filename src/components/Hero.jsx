@@ -19,11 +19,13 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Mohit Singh Rajput</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-          I am an aspiring Software Developer who specializes in developing<br className='sm:block hidden' />
-            user interfaces and web applications
+            I'm an aspiring web developer who loves using web technologies to
+            create cool applications. I'm always eager to learn and improve my
+            skills. Bring on the challenges, I'm ready to soak up knowledge!
           </p>
         </div>
       </div>
+      <br /><br /><br />
 
       <ComputersCanvas />
 
