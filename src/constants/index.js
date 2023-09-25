@@ -186,7 +186,7 @@ const experiences = [
     title: "Campus Ambassador Intern: WFH",
     company_name: "Internshala",
     icon: internshala,
-    iconBg: "#4885ed",
+    iconBg: "#1294C8",
     date: "Apr 2021 - Jun 2021",
     points: [
       "Raised awareness about Internshala across the entire campus.",
@@ -202,7 +202,7 @@ const extracurricular = [
     title: "1.5K+ Connections on LinkedIn",
     type: "Achievements",
     icon: linkedin,
-    iconBg: "#0077B5",
+    iconBg: "#007BB5",
     date: "April 2023",
     points: ["Credential ID: mohitsinghrajput"],
     credential: "https://www.linkedin.com/in/mohitsinghrajput/",
@@ -211,7 +211,7 @@ const extracurricular = [
     title: "Java (Basic), CSS, SQL (Basic)-HackerRank",
     type: "Certification",
     icon: hackerrank,
-    iconBg: "#000",
+    iconBg: "#050C18",
     date: "2022-2023",
     points: [
       "Credential ID: aac000e38dc9",
@@ -224,7 +224,7 @@ const extracurricular = [
     title: "Web Development-Internshala",
     type: "Certification",
     icon: internshala,
-    iconBg: "#4885ed",
+    iconBg: "#1294C8",
     date: "Sept 2021",
     points: ["Credential ID: 281DB109-2DA8-A160-DCBC-C6C0F552B57C"],
     credential:
@@ -234,7 +234,7 @@ const extracurricular = [
     title: "Combat Sport-Karate",
     type: "Extracurricular(Hobby)/Combat Sport",
     icon: karate,
-    iconBg: "#d9dddc",
+    iconBg: "#CCCFD8",
     date: "2006-2020",
     points: [
       "State level Gold medalist in Kumite.",
@@ -247,7 +247,7 @@ const projects = [
   {
     name: "3D Portfolio",
     description:
-      "Web Portfolio in React JS which uses 3D graphics and animations to bring the content into life. The website is divided into several main sections, including an about, Education, project, connect and contact section. Each section is designed to showcase 3D's unique style and creativity, with an emphasis on interactivity and user engagement.",
+      "Web Portfolio in React JS which uses 3D graphics and animations to bring the content to life. The website is divided into several main sections, including an about, Education, project, connect and contact section. Each section is designed to showcase 3D's unique style and creativity, with an emphasis on interactivity and user engagement.",
     tags: [
       {
         name: "react",
