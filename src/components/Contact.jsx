@@ -7,12 +7,16 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { linkedin } from "../assets";
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
-    message: "",
+    location: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -40,7 +44,7 @@ const Contact = () => {
           to_name: "Mohit Singh Rajput",
           from_email: form.email,
           to_email: "mohit.s.rajput032997@gmail.com",
-          message: form.message,
+          location: form.location,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
@@ -52,7 +56,7 @@ const Contact = () => {
           setForm({
             name: "",
             email: "",
-            message: "",
+            location: "",
           });
         },
         (error) => {
@@ -64,69 +68,77 @@ const Contact = () => {
       );
   };
 
+  const openLinkedInProfile = () => {
+    window.open("http://linkedin.com/in/mohitsinghrajput", "_blank");
+  };
+
+  const openCustomLink = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-      >
-        <p className={styles.sectionSubText}>Get in touch</p><br />
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+      <motion.div variants={slideIn("left", "tween", 0.2, 1)} className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
+        <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-        
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
+
+        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>
+              <FontAwesomeIcon icon={faUser} size="1x" style={{ color: "#915EFF" }} /> Name
+            </span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="Mohit Singh Rajput"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              disabled
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className='text-white font-medium mb-4'>
+              <FontAwesomeIcon icon={faEnvelope} size="1x" style={{ color: "#915EFF" }} /> Email Id
+            </span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="mohit.s.rajput032997@gmail.com"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              disabled
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
+            <span className='text-white font-medium mb-4'>
+              <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" style={{ color: "#915EFF" }} /> Location
+            </span>
+            <input
+              type='email'
+              name='email'
+              value={form.location}
               onChange={handleChange}
-              placeholder='What you want to say?'
+              placeholder="Bhopal, Madhya Pradesh, India"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              disabled
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <label className="flex flex-col">
+            <p className="text-center" style={{ color: "#7C7E80" }}>
+              Copyright &copy; 2023 MR Portfolio <br />
+              Designed and Developed by
+              <a href="http://linkedin.com/in/mohitsinghrajput" onClick={openLinkedInProfile}>
+                <strong> Mohit Singh Rajput.</strong>
+              </a>
+            </p>
+          </label>
         </form>
       </motion.div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
+      <motion.div variants={slideIn("right", "tween", 0.2, 1)} className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
         <EarthCanvas />
       </motion.div>
     </div>
