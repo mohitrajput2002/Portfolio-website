@@ -44,7 +44,19 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-14 h-15 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            <span className='sm:block hidden' style={{ color: "#FAFCFB" }} ><u >þ○ʀ₸ƒ○ʟɪ○</u></span>
+            <span 
+              className='sm:block hidden' 
+              style={{
+                backgroundImage: "linear-gradient(to bottom, rgba(245, 202, 153, 0.5), rgba(245, 202, 153, 0.5))",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "100% 5px",
+                backgroundPosition: "0 100%",
+                display: "inline-block",
+                fontWeight: "bold"
+              }} 
+            >
+              ᴘᴏʀᴛƒᴏʟɪᴏ
+            </span>
           </p>
         </Link>
 
