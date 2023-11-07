@@ -9,7 +9,6 @@ import { slideIn } from "../utils/motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import { linkedin } from "../assets";
 
 const Contact = () => {
   const formRef = useRef();
