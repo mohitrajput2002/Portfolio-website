@@ -85,7 +85,7 @@ const education = [
     iconBg: "#fff",
     date: "2019-2023",
     points: [
-      "Courses undertaken: Data Strucutures and Algorithms, Operating Systems, Database Management Systems, Distributed Computing, Object Oriented Programming, Computer Architecture, Computer Network, Compiler Design, Computer Graphics & Multimedia, Soft Computing, Cloud Computing, Information Security, Blockchain Technology, Analysis and Design of Algorithm, Artificial Intelligence, Software Engineering, Machine Learning, Data Science, Internet of Things.",
+      "Courses undertaken: Data Structures and Algorithms, Operating Systems, Database Management Systems, Distributed Computing, Object Oriented Programming, Computer Architecture, Computer Network, Compiler Design, Computer Graphics & Multimedia, Soft Computing, Cloud Computing, Information Security, Blockchain Technology, Analysis and Design of Algorithm, Artificial Intelligence, Software Engineering, Machine Learning, Data Science, Internet of Things.",
       "CGPA: 8.88/10",
     ],
   },
@@ -163,24 +163,24 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Web Development Intern",
-    company_name: "Next Innovation Technology",
-    icon: nextinnovation,
-    iconBg: "#fff",
-    date: "22 Jun 2023 - 29 Aug 2023",
-    points: [
-      "Developed a web application using HTML, CSS, Javascript, PHP and Bootstrap for the client.",
-      "Designed user-friendly UI/UX with responsive designs to make it easy for users to navigate through the website. ",
-      "Designed various different websites with responsive designs and dynamic content. ",
-    ],
-  },
-  {
     title: "Programmer Analyst Trainee",
     company_name: "Cognizant",
     icon: cognizant,
     iconBg: "#fff",
     date: "Upcoming",
     points: ["Offer in hand"],
+  },
+  {
+    title: "Web Development Intern",
+    company_name: "Next Innovation Technology",
+    icon: nextinnovation,
+    iconBg: "#fff",
+    date: "Jun 2023 - Aug 2023",
+    points: [
+      "Developed a web application using HTML, CSS, Javascript, PHP, and Bootstrap for the client.",
+      "Designed user-friendly UI/UX with responsive designs to make it easy for users to navigate through the website. ",
+      "Designed various different websites with responsive designs and dynamic content. ",
+    ],
   },
   {
     title: "Campus Ambassador Intern: WFH",
