@@ -55,7 +55,7 @@ const Hero = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100% 8px",
                 backgroundPosition: "0 100%",
-                color: "red",
+                color: "#915EFF",
                 display: "inline-block",
                 fontWeight: "bold"
               }}
