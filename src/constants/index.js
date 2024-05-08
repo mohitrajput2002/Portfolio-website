@@ -97,8 +97,6 @@ const education = [
     date: "2018-2019",
     points: [
       "Courses undertaken: Physics, Chemistry and Mathematics.",
-      "Percentage: 61.2%",
-      ,
     ],
   },
   {
@@ -163,12 +161,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Programmer Analyst Trainee",
+    title: "Intern",
     company_name: "Cognizant",
     icon: cognizant,
     iconBg: "#fff",
-    date: "Upcoming",
-    points: ["Offer in hand"],
+    date: "Dec 2023 - Apr 2024",
+    points: [
+      "Internship at Cognizant focused on ServiceNow domain.",
+      "Achieved ServiceNow Certified System Administrator and ServiceNow Certified Application Developer certifications.",
+      "Specialized in GRC/IRM (Governance, Risk, and Compliance/Integrated Risk Management) within ServiceNow, gaining hands-on experience in this product line."
+    ],
   },
   {
     title: "Web Development Intern",
