@@ -127,7 +127,7 @@ const Contact = () => {
 
           <label className="flex flex-col">
             <p className="text-center" style={{ color: "#7C7E80" }}>
-              Copyright &copy; 2023 MR Portfolio <br />
+              Copyright &copy; 2024 M.R. Portfolio <br />
               Designed and Developed by
               <a href="http://linkedin.com/in/mohitsinghrajput" onClick={openLinkedInProfile}>
                 <strong> Mohit Singh Rajput.</strong>
