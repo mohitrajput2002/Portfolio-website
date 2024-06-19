@@ -161,8 +161,19 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Programmer Analyst Trainee",
+    company_name: "Cognizant Technology Solutions",
+    icon: cognizant,
+    iconBg: "#fff",
+    date: "May 2024 - present",
+    points: [
+      "Achieved ServiceNow Certified Risk and Compliance certification.",
+      "Specialized in GRC/IRM (Governance, Risk, and Compliance/Integrated Risk Management) within ServiceNow, gaining hands-on experience in this product line."
+    ],
+  },
+  {
     title: "Intern",
-    company_name: "Cognizant",
+    company_name: "Cognizant Technology Solutions",
     icon: cognizant,
     iconBg: "#fff",
     date: "Dec 2023 - Apr 2024",
