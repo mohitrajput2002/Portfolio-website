@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const typedItems = ["Developer", "Freelancer", "Designer", "Learner"];
+  const typedItems = ["Developer", "Engineer", "Designer", "Learner"];
   const [itemIndex, setItemIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
@@ -57,7 +57,7 @@ const Hero = () => {
                 backgroundPosition: "0 100%",
                 color: "#915EFF",
                 display: "inline-block",
-                fontWeight: "bold",
+                fontWeight: "bold"
               }}
             >
               {typedText}
@@ -79,7 +79,7 @@ const Hero = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: "loop"
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
