@@ -8,33 +8,33 @@ const Hero = () => {
   const typedItems = ["Developer", "Freelancer", "Designer", "Learner"];
   const [itemIndex, setItemIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
-    const typeItem = () => {
-      if (charIndex < typedItems[itemIndex].length) {
-        setTypedText((prevText) => prevText + typedItems[itemIndex][charIndex]);
-        setCharIndex(charIndex + 1);
-      } else {
-        setIsTyping(false);
-        setTimeout(() => {
-          setIsTyping(true);
-          setItemIndex((itemIndex + 1) % typedItems.length);
-          setCharIndex(0);
-          setTypedText("");
-        }, 1000); // Delay before typing the next item
-      }
-    };
+    let typingInterval;
 
-    const typingInterval = setInterval(typeItem, 100); // Typing speed
+    if (charIndex < typedItems[itemIndex].length) {
+      typingInterval = setInterval(() => {
+        setTypedText((prev) => prev + typedItems[itemIndex][charIndex]);
+        setCharIndex((prev) => prev + 1);
+      }, 100);
+    } else {
+      // pause before moving to next word
+      const timeout = setTimeout(() => {
+        setItemIndex((prev) => (prev + 1) % typedItems.length);
+        setCharIndex(0);
+        setTypedText("");
+      }, 1000);
+
+      return () => clearTimeout(timeout);
+    }
 
     return () => clearInterval(typingInterval);
   }, [charIndex, itemIndex]);
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className="relative w-full h-screen mx-auto">
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -49,31 +49,25 @@ const Hero = () => {
             I'm{" "}
             <span
               className="typed"
-              aria-hidden="true"
               style={{
-                backgroundImage: "linear-gradient(to bottom, rgba(245, 202, 153, 0.5), rgba(245, 202, 153, 0.5))",
+                backgroundImage:
+                  "linear-gradient(to bottom, rgba(245, 202, 153, 0.5), rgba(245, 202, 153, 0.5))",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100% 8px",
                 backgroundPosition: "0 100%",
                 color: "#915EFF",
                 display: "inline-block",
-                fontWeight: "bold"
+                fontWeight: "bold",
               }}
             >
               {typedText}
             </span>
-            <span 
-              className="typed-cursor" 
-              aria-hidden="true"
-            >
-              |
-            </span>
+            <span className="typed-cursor">|</span>
             <br />
             <b>Bring on the challenges, I'm ready to soak up knowledge!</b>
           </p>
         </div>
       </div>
-      <br /><br /><br />
 
       <ComputersCanvas />
 
@@ -81,9 +75,7 @@ const Hero = () => {
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
+              animate={{ y: [0, 24, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
